@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<SliRx_ShippingModule>
+			<active>true</active>
+			<codePool>community</codePool>
+			<depends>
+				<Mage_Shipping/>
+			</depends>
+		</SliRx_ShippingModule>
+	</modules>
+</config>

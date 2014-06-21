@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<SliRx_ShippingModule>
+			<version>0.1.0</version>
+		</SliRx_ShippingModule>
+	</modules>
+	<global>
+		<models>
+			<slirx_shippingmodule>
+				<class>SliRx_ShippingModule_Model</class>
+				<resourceModel>slirx_shippingmodule_resource</resourceModel>
+			</slirx_shippingmodule>
+			<slirx_shippingmodule_resource>
+				<class>SliRx_ShippingModule_Model_Resource</class>
+			</slirx_shippingmodule_resource>
+		</models>
+		<helpers>
+			<slirx_shippingmodule>
+				<class>SliRx_ShippingModule_Helper</class>
+			</slirx_shippingmodule>
+		</helpers>
+		<resources>
+			<slirx_shippingmodule_setup>
+				<setup>
+					<module>SliRx_ShippingModule</module>
+				</setup>
+			</slirx_shippingmodule_setup>
+		</resources>
+	</global>
+	<default>
+		<carriers>
+			<test_shipping_method_code>
+				<active>1</active>
+				<name>Test Shipping Method</name>
+				<title>Test</title>
+				<sort_order>0</sort_order>
+				<show_in_default>1</show_in_default>
+				<show_in_website>1</show_in_website>
+				<show_in_store>1</show_in_store>
+				<sallowspecific>0</sallowspecific>
+				<specificerrmsg>This shipping method is currently unavailable. If you would like to ship using this
+					shipping method, please contact us.
+				</specificerrmsg>
+				<model>slirx_shippingmodule/carrier_shippingmethod</model>
+			</test_shipping_method_code>
+		</carriers>
+	</default>
+</config>
