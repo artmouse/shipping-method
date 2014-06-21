@@ -34,6 +34,7 @@
 				<active>1</active>
 				<name>Test Shipping Method</name>
 				<title>Test</title>
+				<price>50</price>
 				<sort_order>0</sort_order>
 				<show_in_default>1</show_in_default>
 				<show_in_website>1</show_in_website>

@@ -33,7 +33,7 @@ class SliRx_ShippingModule_Model_Carrier_Shippingmethod
         /** @var $result Mage_Shipping_Model_Rate_Result */
         $result = Mage::getModel('shipping/rate_result');
 
-        $shippingPrice = 50;
+        $shippingPrice = $this->getConfigData('price');
 
         $method = Mage::getModel('shipping/rate_result_method');
         $method->setCarrier($this->_code)
