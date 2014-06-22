@@ -35,6 +35,13 @@ class SliRx_ShippingModule_Model_Carrier_Shippingmethod
 
         $shippingPrice = $this->getConfigData('price');
 
+        $grandTotal = Mage::helper('checkout/cart')->getQuote()->getGrandTotal();
+        if ($this->getConfigData('enable_free_shipping')
+            && $grandTotal >= $this->getConfigData('free_shipping_total')
+        ) {
+            $shippingPrice = 0;
+        }
+
         $method = Mage::getModel('shipping/rate_result_method');
         $method->setCarrier($this->_code)
             ->setCarrierTitle($this->getConfigData('title'))
